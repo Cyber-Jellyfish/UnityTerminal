@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec70db13529e40e1a1557f0a998a13b6, type: 3}
-  m_Name: CommandPrompts
+  m_Name: InspectorProcesses
   m_EditorClassIdentifier: 
-  CommandPrompts: []
+  Processes: []

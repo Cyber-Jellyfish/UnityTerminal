@@ -4,12 +4,12 @@ using UnityEngine;
 namespace UnityTerminal
 {
     [Serializable]
-    public class CommandPrompt
+    public class InspectorProcess
     {
         #region VARIABLES
 
         [Header("Command")]
-        public string PromptName = string.Empty;
+        public string ProcessName = string.Empty;
         public string Filename = string.Empty;
         public string Arguments = string.Empty;
 
