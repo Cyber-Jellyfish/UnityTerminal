@@ -58,3 +58,5 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Assets/UnityTerminal/CustomProcesses.cs
+Assets/UnityTerminal/CustomProcesses.cs.meta
