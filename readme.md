@@ -4,7 +4,7 @@ UnityTerminal is a tool that allows you to start standard or administrator insta
 Editor.<br/>
 You can also add your own System Diagnostic Processes to the CustomCommands script that can be executed within the editor via the Menu
 Bar.<br/>
-Additionally you can also add them to a specialized scriptable object called CommandPromptSo.
+Additionally you can also add them to a specialized scriptable object called CustomProcessesSo.
 
 ## Main Scripts
 
