@@ -92,6 +92,39 @@ public static async Task CustomProcess()
 }
 ```
 
+### Advanced Examples - What am I using it for
+These examples below are examples of how I am currently using this Project and may not necessarily work for you.
+
+#### 1. Starting Android ADB Server
+```c#
+    [MenuItem("Window/Android/ADB/ADB (Start-Server)")]
+    public static async Task StartAdbServer()
+    {
+        await Task.Run(() => ProcessUtilities.StartAdvProcess("adb", @" start-server"));
+    }
+```
+
+#### 2. Stopping Android ADB Server
+```c#
+    [MenuItem("Window/Android/ADB/ADB (Kill-Server)")]
+    public static async Task KillAdbServer()
+    {
+        await Task.Run(() => ProcessUtilities.StartAdvProcess("adb", @" kill-server"));
+    }
+```
+
+#### 3. Starting Android Emulator
+I use the android emulator to test builds of my android games etc. It does not replace an actual device but it definitely works.<br/>
+Additionally I enable "Developer Settings" on the emulator to receive android logs about the device and game.<br/>
+
+```c#
+    [MenuItem("Window/Android/Emulator/Pixel_3")]
+    public static async Task OpenAndroidEmulator()
+    {
+        await Task.Run(() => ProcessUtilities.StartAdvProcess("emulator", @"-avd Pixel_3_API_30"));
+    }
+```
+
 [//]: # (## Command Script Scriptable Object)
 
 [//]: # ()
