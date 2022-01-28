@@ -1,10 +1,11 @@
 # Unity Terminal
 
-UnityTerminal is a tool that allows you to start standard or administrator instance of Command Prompt and/or the Powershell within Unity
-Editor.<br/>
-You can also add your own System Diagnostic Processes to a CustomProcesses script that can be executed within the editor via the Menu
-Bar.<br/>
-Additionally you can also add them to a specialized scriptable object called CustomProcessesSo.
+UnityTerminal is a tool that allows you to start standard or administrator instance of Command Prompt 
+and/or the Powershell within Unity Editor.<br/>
+You can also create and add your own System Diagnostic Processes to a CustomProcesses script that 
+can be executed within the editor via the Menubar.<br/>
+
+[//]: # (Additionally you can also add them to a specialized scriptable object called InspectorProcessesSo.)
 
 ## Main Scripts
 
@@ -25,7 +26,7 @@ console window.
 
 The Windows Command Prompt Script contains methods that allow you to open a Command Prompt (CMD) or Powershell window from within Unity.
 
-To open a Command Prompt window you can navigate to "System/Command Prompt" and select one of the CMD instance you wish to open.<br/>
+To open a Command Prompt window you can navigate to "System/Command Prompt" and select one of the CMD instances you wish to open.<br/>
 Alternatively you can open a CMD instance with the "ctrl+shift+l" (standard instance) or
 "ctrl+alt+l" (admin instance) keyboard shortcuts.
 
@@ -35,10 +36,11 @@ Alternatively you can open a Powershell instance with the "ctrl+shift+h" (standa
 
 ### Custom Processes Script
 
-The Custom Processes Script allows you to code you own custom Processes. Your custom processes can be used with the unity [MenuItem]
-attribute to allow the method to be called from within the Unity Editor via the Menubar or Inspector.
+To create your own Custom Processes, create a Custom Processes Script where you code your own custom Processes.<br/>
+Your custom processes can be used with the unity [MenuItem] attribute to allow the method to be called from within
+the Unity Editor via the Menubar or Inspector.
 
-To create a process in the Custom Process Script you need to do the following:<br/>
+To create a process in your Custom Process Script you need to do the following:<br/>
 
 + Use one of the predefined methods (StartProcess or StartAdvProcess) in the ProcessUtilities class, or
 + Code your own custom Process using System.Diagnostic namespace
@@ -60,7 +62,8 @@ public static async Task Notepad()
 // Starting an Advanced Process
 public static async Task Echo()
 {
-    await Task.Run(() => ProcessUtilities.StartAdvProcess("cmd.exe", "/k echo hello, world"));
+    await Task.Run(() => 
+    ProcessUtilities.StartAdvProcess("cmd.exe", "/k echo hello, world"));
 }
 ```
 
@@ -77,7 +80,7 @@ public static async Task CustomProcess()
         process.StartInfo.RedirectStandardOutput = true;
         process.StartInfo.CreateNoWindow = true;
         process.StartInfo.UseShellExecute = false;
-        process.StartInfo.Arguments = @"/c echo hello world";
+        process.StartInfo.Arguments = @"/k echo hello world";
         process.Start();
                 
         process.StandardInput.WriteLine("echo hello");
@@ -116,7 +119,7 @@ public static async Task CustomProcess()
 The MenuItem attribute allows you to add menu items to the main menu and inspector context menus.<br/>
 The MenuItem attribute turns any static function into a menu command. Only static functions can use the MenuItem attribute.
 
-The Unity documentation states that:
+To use keyboard shortcuts with your custom processes, you can do the following:
 ```text
 To create a hotkey you can use the following special characters: 
 % (ctrl on Windows, cmd on macOS), 
