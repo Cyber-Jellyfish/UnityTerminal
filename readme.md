@@ -92,7 +92,7 @@ public static async Task CustomProcess()
 }
 ```
 
-### Advanced Examples - What am I using it for
+### Additional Examples - What am I using it for
 These examples below are examples of how I am currently using this Project and may not necessarily work for you.
 
 #### 1. Starting Android ADB Server
