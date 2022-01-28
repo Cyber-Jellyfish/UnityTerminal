@@ -2,7 +2,7 @@
 
 UnityTerminal is a tool that allows you to start standard or administrator instance of Command Prompt and/or the Powershell within Unity
 Editor.<br/>
-You can also add your own System Diagnostic Processes to the CustomCommands script that can be executed within the editor via the Menu
+You can also add your own System Diagnostic Processes to a CustomProcesses script that can be executed within the editor via the Menu
 Bar.<br/>
 Additionally you can also add them to a specialized scriptable object called CustomProcessesSo.
 
