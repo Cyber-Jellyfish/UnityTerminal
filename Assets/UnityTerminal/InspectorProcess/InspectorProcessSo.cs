@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UnityTerminal
 {
-    [CreateAssetMenu(menuName = "ScriptableObjects/Inspector Process", fileName = "InspectorProcessSo", order = 81)]
+    // [CreateAssetMenu(menuName = "ScriptableObjects/Inspector Process", fileName = "InspectorProcessSo", order = 81)]
     public class InspectorProcessSo : ScriptableObject
     {
         #region VARIABLES
